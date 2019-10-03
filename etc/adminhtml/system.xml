@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+  * @package     LeviathanStudios\StickyHeader
+  * @version     1.0.0
+  * @author      Greg Crane <gmc31886@gmail.com>
+  */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="leviathan_sticky" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Sticky Header</label>
+            <tab>leviathan</tab>
+            <resource>LeviathanStudios_StickyHeader::stickyheader</resource>
+            <group id="sticky_header" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Stick Header Settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="header_selector" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Header Element Selector</label>
+                    <comment>Include a . (class) or # (id) before the element. If none are given a class will be assumed</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="transparent" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Transparent Effect</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Include a transparent effect on sticky header</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="mobile" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable on Mobile</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Include sticky header functionality on mobile</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

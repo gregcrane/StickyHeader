@@ -1,0 +1,31 @@
+<?php
+/**
+ * @package     LeviathanStudios\StickyHeader
+ * @version     1.0.0
+ * @author      Greg Crane <gmc31886@gmail.com>
+ */
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use LeviathanStudios\StickyHeader\ViewModel\Block\StickyHeader;
+
+/** @var Template $block */
+/** @var StickyHeader $configViewModel */
+$configViewModel = $block->getStickyConfig();
+if ($configViewModel) :
+    $config = $configViewModel->getConfig();
+endif;
+?>
+<?php if ($config && !(empty($config))) : ?>
+    <script type="text/x-magento-init">
+    {
+        "<?= $config['selector'] ?>": {
+           "stickyHeader": {
+                "enabled": "<?= key_exists('enabled', $config) ? $config['enabled'] : 'false' ?>",
+                "mobile": "<?= key_exists('mobile', $config) ? $config['mobile'] : 'false' ?>",
+                "transparent": "<?= key_exists('transparent', $config) ? $config['transparent'] : 'false' ?>"
+           }
+        }
+    }
+    </script>
+<?php endif ?>

@@ -1,0 +1,46 @@
+/**
+ * @package     LeviathanStudios\StickyHeader
+ * @version     1.0.0
+ * @author      Greg Crane <gmc31886@gmail.com>
+ */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .sticky-base {
+        width: 100%;
+
+        &.sticky-active {
+            box-shadow: 0 7px 4px -5px lightgrey;
+        }
+
+        &.sticky-active.sticky-transparent {
+            background: fade(#ffffff, 80%);
+            -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
+        }
+    }
+}
+
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .sticky-base.sticky-active {
+        .sticky();
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .sticky-base.sticky-active.sticky-mobile {
+        .sticky();
+    }
+}

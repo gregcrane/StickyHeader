@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+  * @package     LeviathanStudios\StickyHeader
+  * @version     1.0.0
+  * @author      Greg Crane <gmc31886@gmail.com>
+  */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="leviathan-sticky-header"
+                   template="LeviathanStudios_StickyHeader::sticky-header.phtml"
+                   ifconfig="leviathan_sticky/sticky_header/enabled">
+                <arguments>
+                    <argument name="sticky_config"
+                              xsi:type="object">LeviathanStudios\StickyHeader\ViewModel\Block\StickyHeader</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+  * @package     LeviathanStudios\StickyHeader
+  * @version     1.0.0
+  * @author      Greg Crane <gmc31886@gmail.com>
+  */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <leviathan_sticky>
+            <sticky_header>
+                <enabled>1</enabled>
+                <header_selector>.page-header</header_selector>
+                <transparent>1</transparent>
+                <mobile>1</mobile>
+            </sticky_header>
+        </leviathan_sticky>
+    </default>
+</config>

@@ -1,0 +1,26 @@
+/**
+ * @package     LeviathanStudios\StickyHeader
+ * @version     1.0.0
+ * @author      Greg Crane <gmc31886@gmail.com>
+ */
+
+//
+//  Mixins
+//  _____________________________________________
+
+.sticky() {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    animation: smoothScroll 1s forwards;
+    @keyframes smoothScroll {
+        0% {
+            transform: translateY(-400px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+}
