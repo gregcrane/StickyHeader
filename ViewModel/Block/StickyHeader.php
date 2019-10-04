@@ -1,8 +1,7 @@
 <?php
 /**
- * @package     LeviathanStudios\StickyHeader
- * @version     1.0.0
- * @author      Greg Crane <gmc31886@gmail.com>
+ * @copyright   Copyright © Leviathan Studios, Licensed under MIT
+ * @author      Grey Crane <gmc31886@gmail.com>
  */
 declare(strict_types=1);
 
