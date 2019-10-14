@@ -1,7 +1,7 @@
 <?php
 /**
- * @copyright   Copyright © Leviathan Studios, Licensed under MIT
- * @author      Grey Crane <gmc31886@gmail.com>
+ * @package     LeviathanStudios/Scheduler
+ * @author      Greg Crane <gmc31886@gmail.com>
  */
 declare(strict_types=1);
 
