@@ -57,18 +57,6 @@ class Config
     }
 
     /**
-     * Return the admin configuration for the _____ field.
-     *
-     * @param string $scope
-     * @param null   $store
-     * @return mixed
-     */
-    public function getSomeField($scope = ScopeInterface::SCOPE_STORE, $store = null)
-    {
-        return $this->scopeConfig->getValue('SOME_CONFIG_PATH_HERE', $scope, $store);
-    }
-
-    /**
      * Return the admin configuration for the selector field.
      *
      * @param string $scope
@@ -102,17 +90,5 @@ class Config
     public function getMobile($scope = ScopeInterface::SCOPE_STORE, $store = null)
     {
         return $this->scopeConfig->getValue(static::XML_PATH_STICKY_MOBILE, $scope, $store);
-    }
-
-    /**
-     * Return the admin configuration for some value
-     *
-     * @param string $scope
-     * @param null   $store
-     * @return mixed
-     */
-    public function getSomeValue($scope = ScopeInterface::SCOPE_STORE, $store = null)
-    {
-        return $this->scopeConfig->getValue('core config path', $scope, $store);
     }
 }
